@@ -11,8 +11,6 @@
 
 <body>
 
-
-
 <s:form theme="simple" id="itemAdd" name="itemAdd" action="invoice" method="post" validate="true">
   <h1><s:text name="form.tittle.message"/></h1>
   <table>
@@ -22,19 +20,27 @@
         <s:text name="form.subject.message"/>
         <s:textfield id="subject" name="invoiceBean.subject"/>
       </td>
-    </tr>
+  </tr>
   <tr>
       <td class="evenRow">
+        <s:fielderror fieldName = "invoiceBean.dateFrom" />
         <s:text name="form.fromDate.message"/>
         <sx:datetimepicker id="dateFrom" name="invoiceBean.dateFrom"/>
       </td>
-    </tr>
+  </tr>
   <tr>
     <td class="evenRow">
+       <s:fielderror fieldName = "invoiceBean.dateTo" />
        <s:text name="form.toDate.message"/>
        <sx:datetimepicker id="dateTo" name="invoiceBean.dateTo" />
     </td>
-
+  </tr>
+  <tr>
+    <td class="evenRow">
+       <s:fielderror fieldName = "invoiceBean.grossAmount" />
+       <s:text name="form.grossAmount.message"/>
+       <s:textfield id="grossAmount" name="invoiceBean.grossAmount" />
+    </td>
   </tr>
   <tr>
     <td class="evenRow">
